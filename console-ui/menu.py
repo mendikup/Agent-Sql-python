@@ -1,6 +1,13 @@
+from DALL.agentDbMeneger import AgentDbManeger
+
+
 class Menu:
 
+
+
     def start(self):
+
+        agntDBmngr = AgentDbManeger()
 
         print("-------welcome to EAGLE AGENT system---------")
         print()
@@ -16,3 +23,16 @@ class Menu:
 
             chose= input()
 
+            if chose=="4":
+                agents= agntDBmngr.get_all_agent()
+
+                for agent in agents:
+                    print(agent)
+                    print()
+
+
+
+
+
+menu=Menu()
+menu.start()

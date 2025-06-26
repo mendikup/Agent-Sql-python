@@ -1,7 +1,9 @@
-import DBconection
+from DALL import DBconection
 from models.agent import Agent
 
 class AgentDbManeger:
+
+
 
     def __init__(self):
         self.db = DBconection.DbConectore()
@@ -24,8 +26,3 @@ class AgentDbManeger:
             agents.append(agent)
         return agents
 
-db = AgentDbManeger()
-agents = db.get_all_agent()
-
-for agent in agents:
-    print(agent)
